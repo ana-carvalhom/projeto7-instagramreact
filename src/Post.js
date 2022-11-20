@@ -1,4 +1,12 @@
+import React from "react"
+
 export default function Post(props){
+    
+    
+    const [colorLike, setLike] = React.useState("initial");
+    const [nameIcon, setNameIcon] = React.useState("heart-outline");
+
+
     return(
         <div className="post">
         <div className="topo">
@@ -18,7 +26,15 @@ export default function Post(props){
         <div className="fundo">
             <div className="acoes">
                 <div>
-                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon name={nameIcon} class={colorLike} onClick={() => {
+                        if(colorLike === 'initial'){
+                            setNameIcon("heart");
+                            setLike("red");
+                        } else {
+                            setNameIcon("heart-outline");
+                            setLike("initial")
+                        }
+                    }}></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>

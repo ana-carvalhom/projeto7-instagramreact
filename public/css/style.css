@@ -184,6 +184,15 @@ body {
   width: 100%;
 }
 
+.red {
+  color: red;
+
+}
+
+.initial{
+  visibility: visible;
+ }
+ 
 .post .fundo .acoes {
   display: flex;
   justify-content: space-between;
