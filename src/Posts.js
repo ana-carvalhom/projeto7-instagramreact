@@ -8,14 +8,14 @@ const posts = [
     postImage:"assets/img/gato-telefone.svg",
     likedImage:"assets/img/respondeai.svg" ,
     likedBy: "respondeai",
-    likes:101.523,
+    likes:101523,
     },
     {userImage:"assets/img/barked.svg",
     userName: "barked",
     postImage:"assets/img/dog.svg",
     likedImage:"assets/img/adorable_animals.svg" ,
     likedBy: "adorable_animals",
-    likes:99.159,
+    likes:99159,
     }
 
 ]

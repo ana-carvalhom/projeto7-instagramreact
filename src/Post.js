@@ -20,6 +20,13 @@ export default function Post(props){
             }
         }
 
+        function likePostImage(){
+                setNameIcon("heart");
+                setLike("red");
+                setLikes(props.likes + 1);
+
+        }
+
     function savedPost(){
         if (savePost === 'bookmark-outline'){
             setSavePost("bookmark");
@@ -41,7 +48,7 @@ export default function Post(props){
         </div>
 
         <div className="conteudo">
-            <img src={props.postImage} onClick={likePost} data-test="post-image" />
+            <img src={props.postImage} onClick={likePostImage} data-test="post-image" />
         </div>
 
         <div className="fundo">
