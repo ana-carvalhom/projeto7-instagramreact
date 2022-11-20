@@ -15,7 +15,7 @@
 
       return (
           <div className="stories">
-            {stories.map((story => <Story image={story.image} userName={story.userName}/>))}
+            {stories.map((story => <Story key={story.userName} image={story.image} userName={story.userName}/>))}
             
   
             <div className="setinha">

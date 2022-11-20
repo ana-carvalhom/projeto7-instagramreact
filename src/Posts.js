@@ -24,6 +24,7 @@ const posts = [
 return (
         <div className="posts">
             {posts.map((post => <Post 
+            key={post.userName}
             userImage={post.userImage} 
             userName={post.userName}
             postImage={post.postImage}
