@@ -1,11 +1,20 @@
 import React from "react"
 
 export default function Post(props){
-    
+
     
     const [colorLike, setLike] = React.useState("initial");
     const [nameIcon, setNameIcon] = React.useState("heart-outline");
 
+    function likePost(){
+            if(colorLike === 'initial'){
+                setNameIcon("heart");
+                setLike("red");
+            } else {
+                setNameIcon("heart-outline");
+                setLike("initial")
+            }
+        }
 
     return(
         <div className="post">
@@ -20,21 +29,13 @@ export default function Post(props){
         </div>
 
         <div className="conteudo">
-            <img src={props.postImage} />
+            <img src={props.postImage} onClick={likePost} />
         </div>
 
         <div className="fundo">
             <div className="acoes">
                 <div>
-                    <ion-icon name={nameIcon} class={colorLike} onClick={() => {
-                        if(colorLike === 'initial'){
-                            setNameIcon("heart");
-                            setLike("red");
-                        } else {
-                            setNameIcon("heart-outline");
-                            setLike("initial")
-                        }
-                    }}></ion-icon>
+                    <ion-icon name={nameIcon} class={colorLike} onClick={likePost}></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
