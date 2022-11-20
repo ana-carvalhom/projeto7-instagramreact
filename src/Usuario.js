@@ -1,4 +1,3 @@
-import User from "./User"
 import React from "react"
 
 export default function Usuario() {
@@ -21,9 +20,9 @@ export default function Usuario() {
     }
 
     return (
-        <div class="usuario">
+        <div className="usuario">
             <img src={!image ? initalImage : image} onClick={editImage} />
-            <div class="texto">
+            <div className="texto">
                 <strong>catanacomics</strong>
                 <span>
                    {!userName ? initalName : userName}

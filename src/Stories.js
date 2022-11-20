@@ -14,11 +14,11 @@
 ]
 
       return (
-          <div class="stories">
+          <div className="stories">
             {stories.map((story => <Story image={story.image} userName={story.userName}/>))}
             
   
-            <div class="setinha">
+            <div className="setinha">
               <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
           </div>

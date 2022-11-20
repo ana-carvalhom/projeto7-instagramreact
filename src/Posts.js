@@ -22,7 +22,7 @@ const posts = [
 
 
 return (
-        <div class="posts">
+        <div className="posts">
             {posts.map((post => <Post 
             userImage={post.userImage} 
             userName={post.userName}
