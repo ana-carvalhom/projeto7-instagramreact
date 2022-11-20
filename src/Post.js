@@ -29,7 +29,7 @@ export default function Post(props){
     }
 
     return(
-        <div className="post">
+        <div className="post" data-test="post">
         <div className="topo">
             <div className="usuario">
                 <img src={props.userImage} />
@@ -41,25 +41,25 @@ export default function Post(props){
         </div>
 
         <div className="conteudo">
-            <img src={props.postImage} onClick={likePost} />
+            <img src={props.postImage} onClick={likePost} data-test="post-image" />
         </div>
 
         <div className="fundo">
             <div className="acoes">
                 <div>
-                    <ion-icon name={nameIcon} class={colorLike} onClick={likePost}></ion-icon>
+                    <ion-icon name={nameIcon} class={colorLike} onClick={likePost} data-test="like-post"></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div>
-                    <ion-icon name={savePost} onClick={savedPost}></ion-icon>
+                    <ion-icon name={savePost} onClick={savedPost} data-test="save-post"></ion-icon>
                 </div>
             </div>
 
             <div className="curtidas">
                 <img src={props.likedImage} />
-                <div className="texto">
-                    Curtido por <strong>{props.likedBy}</strong> e <strong>outras {likes} pessoas</strong>
+                <div className="texto" >
+                    Curtido por <strong>{props.likedBy}</strong> e <strong data-test="likes-number">outras {likes} pessoas</strong>
                 </div>
             </div>
         </div>
